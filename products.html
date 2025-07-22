@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Reset -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Option -->
+     <link href="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/css/tom-select.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="at-top">
+    <div id="page-transition"></div>
+
+
+
+    <main class="scroll" data-scroll-container>
+            <!-- Header -->
+    <header>
+
+        <div class="header-content">
+            <div class="top-header">
+                <a href="index.html" class="logo-link">
+                  <img src="images/logo.png" alt="">
+                  <span class="logo-text">ALLINWOOD</span>
+                </a>
+            </div>
+            <div class="header-content bottom" id="sticky-bar">
+    
+                <ul class="menu" id="main-header">
+                    <div class="mobile-nav">
+                        <div class="burger-menu" id="burger-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0,0,256,256">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(9.84615,9.84615)"><path d="M0,4v2h26v-2zM0,12v2h26v-2zM0,20v2h26v-2z"></path></g></g>
+                            </svg>
+                        </div>
+                        <div class="mobile-logo">
+                            <a href="index.html" class="logo-link">
+                                 <span class="logo-text">ALLINWOOD</span>
+                            </a>
+                        </div>
+                        <div class="mobile-icons">
+                            <div>
+                                <img src="images/facebook-logo.svg" alt="">
+                            </div>
+                            <div>
+                                <img src="images/instagram-logo.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <li class="group perspective menu-item"><a href="index.html" class="flip-link">home</a></li>
+                    <li class="group perspective menu-item"><a href="products.html" class="flip-link">Product</a></li>
+                    <li class="group perspective menu-item"><a href="collections.html" class="flip-link">Collections</a></li>
+                    <li class="group perspective menu-item"><a href="resources.html" class="flip-link">Resources</a></li>
+                    <li class="group perspective menu-item"><a href="gallery.html" class="flip-link">Project Gallery</a></li>
+                    <li class="group perspective menu-item"><a href="contact.html" class="flip-link">Contact</a></li>
+                    
+                    <li class="group perspective menu-item"><a href="#" class="flip-link">Find a dealer</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+    </header>
+    <!-- Header -->
+
+    <!-- Products -->
+     <section class="products-wrapper">
+        <div class="products-content">
+            <div class="products-title">
+                <div class="products-title-text">
+                    <h2>All our products</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas tenetur accusantium fugiat delectus aspernatur veritatis nobis corrupti magnam deleniti iste recusandae necessitatibus, earum, facilis omnis maiores obcaecati eum dolores asperiores!</p>
+                </div>
+                <div class="products-title-img">
+                    <img src="./images/products.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="tabs-products-wrapper">
+            <!-- Tabs -->
+            <div class="products-tabs">
+                <button class="tab-button active" data-tab="all">All Products</button>
+                <button class="tab-button" data-tab="fairmont">Fairmont</button>
+                <button class="tab-button" data-tab="moonstone">Moonstone</button>
+                <button class="tab-button" data-tab="wardrobes">Ellysium</button>
+                <button class="tab-button" data-tab="wardrobes">Custom</button>
+                <button class="tab-button" data-tab="wardrobes">Ellegance</button>
+            </div>
+
+            <div class="product-filters-wrapper">
+                <form class="product-filter">
+                    <select name="color">
+                        <option value="Sort" disabled selected hidden>Sort by: relevance</option>
+                        <option value="Black">Black</option>
+                        <option value="Black">White </option>
+                    </select>
+                    <select name="city">
+                        <option value="" disabled selected hidden>City</option>
+                        <option value="Black">Small</option>
+                    </select>
+                    <select name="collections">
+                        <option value="" disabled selected hidden>Collection</option>
+                        <option value="Black">Small</option>
+                    </select>
+                    <select name="date">
+                        <option value="" disabled selected hidden>Manufacture date</option>
+                        <option value="Black">Small</option>
+                    </select>
+                    <div class="prod-search-wrapper">
+                         <input type="text" name="search" id="prod-search" placeholder="search by year, title or keywords">
+                         <button type="submit">search</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contents -->
+            <div class="tab-contents">
+            <div class="tab-content active" id="all">
+                <article>
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="images/FAIRMONT COLLECTION.jpg" alt="">
+                        </div>
+                        <div class="prod-description">
+                            <h2>Name of the product</h2>
+                            <p>Collection</p>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="images/SIGNATURE COLLECTION.jpg" alt="">
+                        </div>
+                        <div class="prod-description">
+                            <h2>Name of the product</h2>
+                            <p>Collection</p>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="images/MOONSTONE COLLECTION.jpg" alt="">
+                        </div>
+                        <div class="prod-description">
+                            <h2>Name of the product</h2>
+                            <p>Collection</p>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="images/ELYSIUM COLLECTION2.jpg" alt="">
+                        </div>
+                        <div class="prod-description">
+                            <h2>Name of the product</h2>
+                            <p>Collection</p>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="images/ELYSIUM COLLECTION2.jpg" alt="">
+                        </div>
+                        <div class="prod-description">
+                            <h2>Name of the product</h2>
+                            <p>Collection</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="tab-content" id="fairmont">
+                <article>
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="images/FAIRMONT COLLECTION.jpg" alt="">
+                        </div>
+                        <div class="prod-description">
+                            <h2>Name of the product</h2>
+                            <p>Collection</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="tab-content" id="moonstone">
+                <article>
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="images/MOONSTONE COLLECTION.jpg" alt="">
+                        </div>
+                        <div class="prod-description">
+                            <h2>Name of the product</h2>
+                            <p>Collection</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="tab-content" id="wardrobes">
+                <!-- WP Loop wardrobes -->
+            </div>
+            </div>
+
+        </div>
+     </section>
+    <!-- Products -->
+    
+    <!-- Footer -->
+         <footer>
+            <div class="footer-content">
+                <div class="footer-menu">
+                    <div class="footer-pages">
+                        <h2>Pages</h2>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Project Gallery</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Find a dealer</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-socials">
+                        <h2>Social</h2>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Pinterest</a></li>
+                            <li><a href="#">Linkedin</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-socials">
+                        <h2>Legal</h2>
+                        <ul>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">terms and conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-lookbook">
+                        <a href="#">download our lookbook</a>
+                    </div>
+                </div>
+            </div>
+         </footer>
+        <!-- Footer -->
+        
+    </main>
+
+    <div class="mobile-menu-wrapper" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-top">
+                <div class="mobile-menu-logo">
+                        <a href="index.html" class="logo-link">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                </div>
+                <div class="mobile-menu-close close-btn" id="closeMenu">
+                    <p>close <svg xmlns="http://www.w3.org/2000/svg" id="closeIcon" width="50" height="50" fill="#fff" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></p>
+                </div>
+            </div>
+            <ul class="menu mobile-menu">
+                <li class="menu-item"><a href="#" class="flip-link">home</a></li>
+                <li class="menu-item"><a href="gallery.html" class="flip-link">project gallery</a></li>
+                <li class="menu-item"><a href="resources.html" class="flip-link">resources</a></li>
+                <li class="menu-item"><a href="#" class="flip-link">find a dealer</a></li>
+                <li class="menu-item has-submenu">
+                    <a href="#" class="submenu-toggle">Collections</a>
+                    <ul class="submenu">
+                    <li><a href="#">Wood</a></li>
+                    <li><a href="#">Stone</a></li>
+                    <li><a href="#">Metal</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="contact.html" class="flip-link">contact</a></li>
+            </ul>
+            <div class="mobile-menu-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+        
+    </div>
+                   
+    <!-- animation -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/js/tom-select.complete.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+ <!-- js -->
+ <script src="js/products.js"></script>
+
+</body>
+</html>
