@@ -1,0 +1,203 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+        window.addEventListener('load', () => {
+            ScrollTrigger.refresh();
+            });
+
+            window.addEventListener('load', () => {
+
+                document.body.style.visibility = 'visible';
+
+
+                gsap.to('#page-transition', {
+                duration: 0.8,
+                opacity: 0,
+                ease: 'power2.out',
+                onComplete: () => {
+                    document.getElementById('page-transition').style.display = 'none';
+                }
+            });
+        })
+
+const burger = document.getElementById('burger-toggle');
+const menuWrapper = document.getElementById('mobileMenu');
+const menuItems = menuWrapper.querySelectorAll('.menu-item');
+
+let isMenuOpen = false;
+
+const openMenu = () => {
+  menuWrapper.classList.add('active');
+  
+  gsap.to(menuWrapper, {
+    duration: 0.6,
+    y: 0,
+    opacity: 1,
+    ease: "power3.out"
+  });
+
+  gsap.fromTo(menuItems, 
+    { y: 20, opacity: 0 }, 
+    { 
+      y: 0,
+      opacity: 1,
+      stagger: 0.08,
+      duration: 0.6,
+      delay: 0.1,
+      ease: "power2.out"
+    }
+  );
+
+  burger.classList.add('open');
+  isMenuOpen = true;
+};
+
+const closeMenu = () => {
+  gsap.to(menuWrapper, {
+    duration: 0.4,
+    y: '-100vh',
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      menuWrapper.classList.remove('active');
+    }
+  });
+
+  burger.classList.remove('open');
+  isMenuOpen = false;
+};
+
+burger.addEventListener('click', () => {
+  isMenuOpen ? closeMenu() : openMenu();
+});
+const closeBtn = document.getElementById('closeMenu');
+const closeIcon = document.getElementById('closeIcon')
+
+closeBtn.addEventListener('click', () => {
+  closeMenu(); 
+ gsap.to(closeIcon, {
+    rotation: 90,
+    duration: 0.2,
+    ease: 'expo',
+    onComplete: () => {
+      gsap.to(closeIcon, {
+        rotation: 0,
+        duration: 0.3,
+        ease: 'power1.inOut',
+        delay: 1
+      });
+    }
+  });
+});
+
+  document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const parent = toggle.closest('.menu-item');
+
+    
+    document.querySelectorAll('.menu-item.has-submenu').forEach(item => {
+      if (item !== parent) item.classList.remove('active');
+    });
+
+    parent.classList.toggle('active');
+  });
+});
+
+  if (window.innerWidth <= 768) {
+    const headings = document.querySelectorAll(".footer-content h2");
+
+    headings.forEach((heading) => {
+      heading.addEventListener("click", () => {
+        const list = heading.nextElementSibling;
+
+        heading.classList.toggle("active");
+        list.classList.toggle("open");
+      });
+    });
+  }
+
+    const stickyBar = document.getElementById("sticky-bar");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentY = window.scrollY;
+
+    // Фиксируем шапку при прокрутке
+    if (currentY > 300) {
+      stickyBar.classList.add("fixed");
+    } else {
+      stickyBar.classList.remove("fixed");
+    }
+
+    // Добавляем/убираем тень плавно
+    if (currentY < 30) {
+      stickyBar.classList.add("no-shadow");
+    } else {
+      stickyBar.classList.remove("no-shadow");
+    }
+
+    lastScrollY = currentY;
+  });
+
+  const images = document.querySelectorAll('.parallax-img');
+  new simpleParallax(images, {
+    scale: 1.2,
+    orientation: 'down-right',
+    delay: 0.2,
+    transition: 'cubic-bezier(0,0,0,1)'
+  });
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".elegant-title", {
+    scrollTrigger: {
+      trigger: ".elegant-title",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    opacity: 0,
+    y: 40,
+    duration: 1.2,
+    ease: "power2.out"
+  });
+
+  gsap.from(".collections-description-img img", {
+    scrollTrigger: {
+      trigger: ".collections-description-img img",
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+    opacity: 0,
+    scale: 0.95,
+    duration: 1.4,
+    ease: "power2.out"
+  });
+
+
+  document.querySelector('.collection-intro-wrapper a').addEventListener('click', function(e) {
+  e.preventDefault();
+  gsap.to(window, {
+    duration: 1.2,
+    scrollTo: "#collections-scroll",
+    ease: "power3.out"
+  });
+});
+
+gsap.utils.toArray('.collections-description-content article').forEach((article, i) => {
+  gsap.from(article, {
+    scrollTrigger: {
+      trigger: article,
+      start: "top 85%",
+      toggleActions: "play none none none", // анимация запускается один раз
+    },
+    opacity: 0,
+    y: 60,
+    duration: 1,
+    ease: "power2.out",
+    delay: i * 0.15 // для поочерёдного эффекта
+  });
+});
+
+});
