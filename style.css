@@ -2023,6 +2023,7 @@ form button:hover svg {
 }
 .products-title-img {
   width: 40%;
+  box-shadow: 0 0 510px rgba(255, 255, 255, 0.1);
 }
 .products-title-text {
   width: 55%;
@@ -2044,11 +2045,11 @@ form button:hover svg {
   border: none;
   border-bottom: 1px solid #333333;
   padding-bottom: 5px;
+  padding: 5px 35px;
   font-size: 16px;
   text-transform: capitalize;
   display: inline-block;
   cursor: pointer;
-  width: 10%;
 }
 .tabs-products-wrapper .products-tabs {
   width: 100%;
@@ -2570,8 +2571,26 @@ select::-webkit-scrollbar-thumb {
     width: 90%;
   }
 }
-
+@media all and (max-width: 1300px) {
+  .tab-content article {
+    width: 30%;
+  }
+  .tab-content article h2 {
+    margin-top: 10px;
+  }
+}
 @media all and (max-width:1200px) {
+  .products-title {
+    display: flex;
+    flex-direction: column;
+  }
+  .products-title > div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .products-title > div:first-child {
+    margin-bottom: 40px;
+  }
   .collection-intro-wrapper {
     display: flex;
     flex-direction: column;
@@ -2815,6 +2834,25 @@ select::-webkit-scrollbar-thumb {
   }
 }
   @media all and (max-width:1000px) {
+    .tabs-products-wrapper .products-tabs button {
+      width: 50%;
+      padding: 20px;
+    }
+    .tab-content article {
+      width: 45%;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    .tabs-products-wrapper .products-tabs {
+      flex-wrap: wrap;
+    }
+    .product-filter select {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .product-filter {
+      flex-wrap: wrap;
+    }
     .story-content {
       display: flex;
       flex-direction: column;
@@ -3098,6 +3136,9 @@ select::-webkit-scrollbar-thumb {
   }
 }
 @media all and (max-width:600px) {
+  .tab-content article {
+    width: 90%;
+  }
   .info-img-wrapper .info-img {
     width: 100% !important;
     margin: 0 auto;
